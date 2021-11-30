@@ -1,5 +1,5 @@
-# Group Psi's Project
+# Group Zeta Eta's Project
 
 TODO: update readme with game description
 
-Play the game: https://hdb-gamedev.github.io/group-psi/
+Play the game: https://hdb-gamedev.github.io/group-zeta-eta/

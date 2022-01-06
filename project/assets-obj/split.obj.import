@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/split.obj-914768c6b4fd5ad83d72f21c06f7aaa6.mesh"
+
+[deps]
+
+files=[ "res://.import/split.obj-914768c6b4fd5ad83d72f21c06f7aaa6.mesh" ]
+
+source_file="res://assets-obj/split.obj"
+dest_files=[ "res://.import/split.obj-914768c6b4fd5ad83d72f21c06f7aaa6.mesh", "res://.import/split.obj-914768c6b4fd5ad83d72f21c06f7aaa6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

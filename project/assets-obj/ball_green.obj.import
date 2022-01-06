@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ball_green.obj-ed945b8dcec5326fd4ea64fc10028bce.mesh"
+
+[deps]
+
+files=[ "res://.import/ball_green.obj-ed945b8dcec5326fd4ea64fc10028bce.mesh" ]
+
+source_file="res://assets-obj/ball_green.obj"
+dest_files=[ "res://.import/ball_green.obj-ed945b8dcec5326fd4ea64fc10028bce.mesh", "res://.import/ball_green.obj-ed945b8dcec5326fd4ea64fc10028bce.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

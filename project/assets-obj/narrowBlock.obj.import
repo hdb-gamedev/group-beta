@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/narrowBlock.obj-7b2d39bb54420f00228e1cae9cd29ff8.mesh"
+
+[deps]
+
+files=[ "res://.import/narrowBlock.obj-7b2d39bb54420f00228e1cae9cd29ff8.mesh" ]
+
+source_file="res://assets-obj/narrowBlock.obj"
+dest_files=[ "res://.import/narrowBlock.obj-7b2d39bb54420f00228e1cae9cd29ff8.mesh", "res://.import/narrowBlock.obj-7b2d39bb54420f00228e1cae9cd29ff8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

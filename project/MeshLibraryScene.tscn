@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets-obj/corner.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets-obj/castle.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://assets-obj/end.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://assets-obj/crest.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://assets-obj/flag_green.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://assets-obj/straight.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://assets-obj/start.obj" type="ArrayMesh" id=7]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="castle" type="MeshInstance" parent="."]
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="corner" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="end" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../corner")
+material/0 = null
+material/1 = null
+
+[node name="crest" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+mesh = ExtResource( 4 )
+skeleton = NodePath("../flag_green")
+material/0 = null
+material/1 = null
+
+[node name="flag_green" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+mesh = ExtResource( 5 )
+material/0 = null
+material/1 = null
+
+[node name="start" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="straight" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51115, 0, 0 )
+mesh = ExtResource( 6 )
+material/0 = null
+material/1 = null

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/flag_green.obj-4ad1c8de1f7268a55df801120cf45971.mesh"
+
+[deps]
+
+files=[ "res://.import/flag_green.obj-4ad1c8de1f7268a55df801120cf45971.mesh" ]
+
+source_file="res://assets-obj/flag_green.obj"
+dest_files=[ "res://.import/flag_green.obj-4ad1c8de1f7268a55df801120cf45971.mesh", "res://.import/flag_green.obj-4ad1c8de1f7268a55df801120cf45971.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

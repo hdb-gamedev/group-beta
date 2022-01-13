@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://MeshLibary.tres" type="MeshLibrary" id=1]
+[ext_resource path="res://MeshLibrary.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://blue_ball.tscn" type="PackedScene" id=2]
 
 [node name="Spatial" type="Spatial"]
@@ -9,13 +9,24 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.39607 )
 
 [node name="Camera" type="Camera" parent="BlueBall"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00471556, -0.482551, 1.73118 )
+transform = Transform( 1, 0, 0, 0, 0.861434, 0.507869, 0, -0.507869, 0.861434, -0.00471556, 0.5574, 1.73118 )
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource( 1 )
 cell_size = Vector3( 1, 1, 1 )
 data = {
-"cells": PoolIntArray( -65536, 65535, 6, -65535, 65535, 6, -65534, 65535, 5, -3, 65535, 655362, -2, 65535, 3, -1, 65535, 6 )
+"cells": PoolIntArray( -65536, 65535, 6, -65535, 65535, 6, -65534, 65535, 5, -3, 65535, 655367, -2, 65535, 3, -1, 65535, 6 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, -1, 0 )
+}
+
+[node name="Flag map" type="GridMap" parent="."]
+mesh_library = ExtResource( 1 )
+cell_size = Vector3( 1, 1, 1 )
+data = {
+"cells": PoolIntArray( -3, 65535, 655364 )
 }
 __meta__ = {
 "_editor_clip_": 0,

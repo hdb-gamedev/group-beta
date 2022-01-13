@@ -8,9 +8,6 @@
 [node name="BlueBall" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.39607 )
 
-[node name="Camera" type="Camera" parent="BlueBall"]
-transform = Transform( 1, 0, 0, 0, 0.861434, 0.507869, 0, -0.507869, 0.861434, -0.00471556, 0.5574, 1.73118 )
-
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource( 1 )
 cell_size = Vector3( 1, 1, 1 )
@@ -32,3 +29,7 @@ __meta__ = {
 "_editor_clip_": 0,
 "_editor_floor_": Vector3( 0, -1, 0 )
 }
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.669118, -0.377426, 0.64018, 0, 0.861434, 0.507869, -0.743157, -0.339824, 0.576401, 3.19978, 2.69111, 2.04238 )
+fov = 71.8313

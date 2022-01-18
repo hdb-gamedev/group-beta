@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://MeshLibrary.tres" type="MeshLibrary" id=1]
 [ext_resource path="res://blue_ball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://CameraSwitch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Ball Follow.gd" type="Script" id=4]
 
 [node name="Spatial" type="Spatial"]
 
 [node name="BlueBall" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.39607 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50237, -0.370796, -0.499596 )
+
+[node name="Ball Follow" type="Camera" parent="BlueBall"]
+transform = Transform( 0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 1.40904, 1.30646, 1.10972 )
+script = ExtResource( 4 )
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource( 1 )
@@ -22,6 +28,8 @@ __meta__ = {
 [node name="Flag map" type="GridMap" parent="."]
 mesh_library = ExtResource( 1 )
 cell_size = Vector3( 1, 1, 1 )
+collision_layer = 0
+collision_mask = 0
 data = {
 "cells": PoolIntArray( -3, 65535, 655364 )
 }
@@ -31,5 +39,13 @@ __meta__ = {
 }
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.669118, -0.377426, 0.64018, 0, 0.861434, 0.507869, -0.743157, -0.339824, 0.576401, 3.19978, 2.69111, 2.04238 )
-fov = 71.8313
+transform = Transform( 0.669118, -0.377426, 0.640181, 0, 0.861434, 0.507869, -0.743157, -0.339824, 0.576401, 3.99155, 1.51916, 2.95645 )
+fov = 90.0
+far = 8192.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.167911, -0.878694, 0.446881, 0.122088, 0.468363, 0.875061, -0.978213, -0.0923731, 0.185921, 0, 0, 0 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 3 )]

@@ -32,7 +32,7 @@ func _draw ():
 		if (camera.is_position_behind (lines[i].start) || camera.is_position_behind (lines[i].end)):
 			continue
 
-		draw_line(screen_point_start, screen_point_end, lines[i].color)
+		draw_line3d(screen_point_start, screen_point_end, lines[i].color)
 	
 	var i = lines.size () - 1
 	while (i >= 0):
@@ -41,5 +41,5 @@ func _draw ():
 			removed_line = true
 		i -= 1
 
-func draw_line (start, end, color, time = 0.0):
+func draw_line3d (start, end, color, time = 0.0):
 	lines.append (Line.new (start, end, color, time))

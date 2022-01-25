@@ -1,0 +1,14 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type spatial ;
+uniform vec3 color;
+void fragment (){
+	float r = length(2.0 * (UV - 0.5));
+	float epsilon = 0.005;
+	if(r > 1.0 + epsilon){
+		discard;
+	}
+	ALBEDO = color;
+	ALPHA = 1.0 - smoothstep(1.0 - epsilon, 1.0 + epsilon, r);
+}"

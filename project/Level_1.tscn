@@ -48,5 +48,4 @@ transform = Transform( 0.167911, -0.878694, 0.446881, 0.122088, 0.468363, 0.8750
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 3 )]
-visible = false
 mouse_filter = 2

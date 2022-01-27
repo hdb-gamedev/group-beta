@@ -2,13 +2,20 @@
 
 [resource]
 code = "shader_type spatial ;
-uniform vec3 color;
+uniform vec2 position;
+uniform bool pressed;
+uniform float innerradius;
+uniform float outerthickness;
 void fragment (){
-	float r = length(2.0 * (UV - 0.5));
-	float epsilon = 0.005;
-	if(r > 1.0 + epsilon){
-		discard;
+	vec2 uv = 2. * (UV-0.5);
+	float r = length(uv);
+	ALBEDO = vec3(100.0);
+	float outercircle = smoothstep(1.0-outerthickness, 1.0-outerthickness/2.0, r) - smoothstep(.99, 1.0, r);
+	float innercircle;
+	if (pressed) {
+		 innercircle = 1.0 - smoothstep(innerradius-.02, innerradius, distance(uv, position*2.));
+	} else {
+		innercircle = 0.0;
 	}
-	ALBEDO = color;
-	ALPHA = 1.0 - smoothstep(1.0 - epsilon, 1.0 + epsilon, r);
+	ALPHA = outercircle + innercircle;	
 }"

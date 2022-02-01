@@ -47,7 +47,8 @@ far = 8192.0
 transform = Transform( 0.167911, -0.878694, 0.446881, 0.122088, 0.468363, 0.875061, -0.978213, -0.0923731, 0.185921, 0, 0, 0 )
 
 [node name="Controls" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28817, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.40178, 0 )
+ball_path = NodePath("../BlueBall")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

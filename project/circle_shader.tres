@@ -7,13 +7,13 @@ uniform bool pressed;
 uniform float innerradius;
 uniform float outerthickness;
 void fragment (){
-	vec2 uv = 2. * (UV-0.5);
+	vec2 uv = (UV-0.5);
 	float r = length(uv);
 	ALBEDO = vec3(100.0);
-	float outercircle = smoothstep(1.0-outerthickness, 1.0-outerthickness/2.0, r) - smoothstep(.99, 1.0, r);
+	float outercircle = smoothstep(0.5-outerthickness, 0.5-outerthickness/2.0, r) - smoothstep(.49, .5, r);
 	float innercircle;
 	if (pressed) {
-		 innercircle = 1.0 - smoothstep(innerradius-.02, innerradius, distance(uv, position*2.));
+		 innercircle = 1. - smoothstep(innerradius-.02, innerradius, distance(uv, position));
 	} else {
 		innercircle = 0.0;
 	}

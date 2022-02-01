@@ -7,9 +7,9 @@
 
 [sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 1 )
-shader_param/position = Vector2( 0.383, 0.469 )
+shader_param/position = Vector2( 0.263, 0.314 )
 shader_param/pressed = true
-shader_param/innerradius = 0.2
+shader_param/innerradius = 0.1
 shader_param/outerthickness = 0.06
 
 [node name="Controls" type="Spatial"]
@@ -22,7 +22,3 @@ material = SubResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.94078, 0.339017, 0, -0.339017, 0.94078, 0, 1.05841, 2.856 )
-
-[node name="CSGSphere" type="CSGSphere" parent="."]
-visible = false
-radius = 0.25
